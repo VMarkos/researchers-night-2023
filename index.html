@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="./css/othello.css" media="screen"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.css">
+        </link>
+
+        <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.js">
+        </script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/theme/monokai.min.css">
+        <script type="text/javascript" src="./prudens_web/parsers.js"></script>
+        <script type="text/javascript" src="./prudens_web/prudens.js"></script>
+        <script type="text/javascript" src="./prudens_web/prudensUtils.js"></script>
+        <script type="text/javascript" src="./scripts/othello.js"></script>
+        <script type="text/javascript" src="./scripts/tour.js"></script>
+        <title>
+            Prudens &mdash; Othello
+        </title>
+    </head>
+    <body>
+        <div id="body-container" class="center-board-container">
+            <div id="game-container" class="game-container">
+                <div id="score-board" class="othello-score-board-container">
+                    <div class="othello-point-container">
+                        <div class="othello-point-color black"></div>
+                        <div id="blacks" class="othello-score-text-container">2</div>
+                    </div>
+                    <div id="prudens-play-button" class="prudens-play-button-container inactive">
+                        Play
+                    </div>
+                    <div class="othello-point-container">
+                        <div class="othello-point-color white"></div>
+                        <div id="whites" class="othello-score-text-container">2</div>
+                    </div>
+                </div>
+                <div id="board-container" class="othello-board-container">
+                    
+                </div>
+            </div>
+            <div class="explanation-container">
+                <div id="buttons-container" class="buttons-container">
+                    <div class="why-button", onclick="explain()">Why?</div>
+                    <div class="autoplay-checkbox-container">
+                        <div class="inner-checkbox-container">
+                            <input type="checkbox" id="autoplay-checkbox" name="autoplay">
+                            <label>Autoplay</label>
+                        </div>
+                    </div>
+                    <div class="reset-button", onclick="reset()">Reset</div>
+                </div>
+                <div id="explanation-text" class="explanation-text">
+
+                </div>
+                <div id="info-container" class="footer-container">
+                    <div class="tour-container" onclick="startTour()">
+                        Take a Tour!
+                    </div>
+                    <div class="help-container">
+                        <a href="https://www.eothello.com/#how-to-play"><i class="fa fa-info-circle fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
